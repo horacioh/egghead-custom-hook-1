@@ -1,13 +1,19 @@
 import React from "react"
 import Field from "./Field"
 
-function Settings() {
+function useUser() {
   const [user, setUser] = React.useState({
     id: "1234asdf",
     email: "email@egghead.io",
     firstName: "John",
     lastName: "Doe",
   })
+
+  return user
+}
+
+function Settings() {
+  const user = useUser()
 
   return (
     <div className="py-12">
